@@ -1,4 +1,7 @@
+const path = require('path')
 module.exports = {
+  publicPath: '/checkout/',
+  outputDir: path.resolve(__dirname, '../build/checkout'),
   devServer: {
     disableHostCheck: true,
     public: process.env.VUE_APP_DEV_SERVER
