@@ -139,15 +139,16 @@ export default new Vuex.Store({
           commit('updateCustomerAddresses', customerAddresses)
           return customerAddresses
         })
+        // eslint-disable-next-line no-console
         .catch(response => console.log(response))
 
       APIService.getCustomerPaymentSources()
         .then(customerPaymentSources => {})
+        // eslint-disable-next-line no-console
         .catch(response => console.log(response))
     },
     setOrderCustomerEmail ({ commit, state }) {
       NProgress.start()
-      console.log(state.order.customer_email)
       return APIService.updateOrder(state.order, {
         customer_email: state.order.customer_email
       })

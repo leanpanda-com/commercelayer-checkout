@@ -306,7 +306,6 @@ Cypress.Commands.add('set_default_shipping_methods', options => {
       method: 'GET',
       headers: apiRequestHeaders(accessToken)
     }).then(response => {
-      console.log(response)
 
       let shipments = response.body.data
       _.each(shipments, shipment => {
