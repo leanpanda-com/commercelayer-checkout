@@ -29,6 +29,7 @@ const getAccessToken = () => {
       return response.data.access_token
     })
     .catch(error => {
+      // eslint-disable-next-line no-console
       console.log('Get access token error:', error.response)
     })
 }
@@ -47,6 +48,7 @@ const refreshAccessToken = refreshToken => {
       return response.data.access_token
     })
     .catch(error => {
+      // eslint-disable-next-line no-console
       console.log('Get access token error:', error.response)
     })
 }

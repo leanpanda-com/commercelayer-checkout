@@ -45,6 +45,7 @@ const router = new Router({
             }
           })
           .catch(error => {
+            // eslint-disable-next-line no-console
             console.log(error)
           })
       },
@@ -66,6 +67,7 @@ const router = new Router({
                 store.dispatch('placeOrder')
               })
               .catch(error => {
+                // eslint-disable-next-line no-console
                 console.log(error)
 
                 next({
